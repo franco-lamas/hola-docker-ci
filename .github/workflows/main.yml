@@ -10,7 +10,7 @@ on:
     branches:
       - master
 
-  jobs:
+jobs:
     ci-frontend:
       runs-on: ubuntu-latest
       container:
