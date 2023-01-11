@@ -3,6 +3,8 @@ WORKDIR /opt/front
 COPY . .
 RUN npm install
 RUN npm run build:prod
+RUN npm audit fix --force
+
 
 FROM nginx
 WORKDIR /var/www/front
