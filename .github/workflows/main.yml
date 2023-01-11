@@ -36,11 +36,9 @@ jobs:
             npm test
 
 
-
-
     docker-login:
       runs-on: ubuntu-latest
-      needs: [ci-frotend,ci-backend]
+      needs: [ci-frontend,ci-backend]
       - uses: actions/checkout@v1
         - name: Docker login
           run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
