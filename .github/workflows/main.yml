@@ -66,7 +66,7 @@ jobs:
       needs: [docker-login]
       steps:
         - name: Build backend
-          run: docker build -t backend ./frontbackendend
+          run: docker build -t backend ./backend
         - name: Tags
           run: |
             docker tag front ${{ secrets.DOCKER_USER }}/backend:${{ github.sha }}
