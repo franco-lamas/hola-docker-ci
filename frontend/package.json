@@ -62,5 +62,10 @@
   },
   "jest": {
     "preset": "ts-jest"
+  },
+  {
+    "scripts": {
+      "start": "react-scripts start --openssl-legacy-provider",
+    }
   }
 }
