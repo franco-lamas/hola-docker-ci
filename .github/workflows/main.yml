@@ -49,7 +49,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: [docker-login]
       steps:
-
+        - uses: actions/checkout@v1
         - name: Build frontend
           run: cd frontend && docker build -t front .
         - name: Tags
