@@ -1,9 +1,8 @@
-FROM node AS builder
+FROM node:10.0.0 AS builder
 WORKDIR /opt/front
 COPY . .
 RUN npm install
 RUN npm run build:prod
-RUN npm audit fix --force
 
 
 FROM nginx
