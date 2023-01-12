@@ -23,7 +23,7 @@ jobs:
         - name: Audit Fix
           run: |
             cd frontend
-            npm audit fix --force
+            npm audit fix 
         - name: NPM Install & Test
           run: |
             cd frontend
