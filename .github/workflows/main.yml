@@ -16,11 +16,17 @@ jobs:
         image: node
       steps:
         - uses: actions/checkout@v1
-        - name: Install & Tests
+        - name: Package Lock
           run: |
             cd frontend
             npm i --package-lock-only  
+        - name: Audit Fix
+          run: |
+            cd frontend
             npm audit fix --force
+        - name: NPM Install & Test
+          run: |
+            cd frontend
             npm install
             npm test
 
