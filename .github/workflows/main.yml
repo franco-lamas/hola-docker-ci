@@ -19,6 +19,7 @@ jobs:
         - name: Install & Tests
           run: |
             cd frontend
+            npm i --package-lock-only  
             npm audit fix --force
             npm install
             npm test
@@ -33,6 +34,7 @@ jobs:
         - name: Install & Tests
           run: |
             cd backend
+            npm i --package-lock-only  
             npm audit fix --force
             npm install
             npm test
