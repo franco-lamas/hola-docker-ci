@@ -20,10 +20,6 @@ jobs:
           run: |
             cd frontend
             npm i --package-lock-only  
-        - name: Audit Fix
-          run: |
-            cd frontend
-            npm audit fix 
         - name: NPM Install & Test
           run: |
             cd frontend
